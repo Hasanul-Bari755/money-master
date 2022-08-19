@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Master</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    
+    <section class="w-4/5 mx-auto">
+        <h1 class="text-5xl  text-lime-500 font-bold mt-2 mx-auto">Money Master</h1>
+        <div class="grid grid-cols-2 gap-4  mt-6">
+            <div>
+                <img class="h-96" src="https://images.unsplash.com/photo-1515180711443-f8685c6d6a74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGRvbGxhcnxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60" alt="">
+            </div>
+            <!-- ... -->
+            <div class="bg-slate-200  py-5 px-8">
+                 <p class="text-center font-semibold text-2xl">Income</p>
+                 <p class="text-center font-semibold mt-3 ">Income:  <input id="income" class="ml-2 pl-2 " type="text"></p>
+                 <p class="text-center font-semibold text-2xl mt-3">Expenses</p>
+                 <p class=" font-semibold mt-3 text-center">Food:<input id="food" class="ml-2 pl-2" type="text"></p>
+                 <p class=" font-semibold mt-3 text-center">Rent: <input id="rent" class="ml-2 pl-2" type="text"></p>
+                 <p class=" font-semibold mt-3 text-center">Clothes:<input id="cloth" class="ml-2 pl-2" type="text"></p>
+
+                <div class="text-center">
+                    <button id="calculate" class="bg-blue-500 text-white font-bold mt-12 px-8 py-2 rounded">Calculate</button>
+                </div>
+                <p class="text-center font-semibold text-2xl mt-3">Total Expenses:<span id="expenses">00</span></p>
+                
+                <p class="text-center font-semibold text-2xl mt-3">Balance:<span id="balance">00</span></p>
+ 
+               <div class="mt-3 text-center">
+                 <small class="font-semibold text-lg">Save:</small>
+                  <input id="save-input"  class="w-1/4 py-2 pl-2" type="text">
+                  <small class="font-semibold text-lg ml-2">%</small>
+                  <button id="save-btn" class="bg-blue-500 text-white font-bold mt-8 ml-4 px-8 py-2 rounded">Save</button>
+               </div>
+
+               <p class="text-center font-semibold text-2xl mt-3">Saving Amount:<span id="saving-amount">00</span></p>
+               <p class="text-center font-semibold text-2xl mt-3">Remaining Balance: :<span id="re-balance">00</span></p>
+            </div>
+      </div>
+    </section>
+    <script src="js/commonFunction.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
