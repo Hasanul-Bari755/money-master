@@ -26,6 +26,9 @@ document.getElementById('save-btn').addEventListener('click',function(){
      
 
     const savingAmountValue = savingAmount();
+    if(isNaN(savingAmountValue) || savingAmountValue < 0){
+        return;
+    }
     setInputValueById("saving-amount",savingAmountValue);
 
     const remainingBalance = balance() - savingAmountValue;
