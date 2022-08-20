@@ -8,9 +8,11 @@ function inputField(){
 
     if(isNaN(savingPersent || income || food || rent || clothes)){
         alert("Enter a valid input")
+        return;
     }
     else if(income <= 0 || food <= 0 || rent <= 0 || clothes <= 0 || savingPersent <= 0  ){
         alert("Enter positive number")
+        return;
     }
 }
 
@@ -19,7 +21,10 @@ function incomeLessExpenses(){
     const expenses = totalExpenses();
     if(income < expenses){
         alert("Income is less then expenses")
-      
+        return true;
+    }
+    else{
+        return false;
     }
     
 }
@@ -27,6 +32,10 @@ function incomeLessExpenses(){
 function  balancelessThenSaveAmount(){
     if(balance() < savingAmount()){
         alert('Balance less then saving amount');
+        return true;
+    }
+    else{
+        return false;
     }
 }
 
@@ -34,6 +43,7 @@ function saveingAmountGreater100(){
     const savingPersent  =getInputValueById('save-input');
     if(savingPersent > 100){
         alert('Save is not possible')
+        return;
     }
 }
 
@@ -56,7 +66,12 @@ function totalExpenses(){
     const food = getInputValueById('food');
     const rent  = getInputValueById('rent');
     const clothes = getInputValueById('cloth');
-    return food + rent + clothes;
+    if(!isNaN(food && rent && clothes)){
+        return food + rent + clothes;
+    }
+    else{
+        return 0;
+    }
 }
 
 function balance(){

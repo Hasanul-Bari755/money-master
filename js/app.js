@@ -1,10 +1,16 @@
 document.getElementById('calculate').addEventListener('click',function(){
       
     inputField()
-    incomeLessExpenses()
+   const isTrue =  incomeLessExpenses()
+   if(isTrue === true){
+    return;
+   }
 
     const totalExpensesValue = totalExpenses();
     const balanceValue = balance()
+    if(isNaN(balanceValue)){
+        return;
+    }
     setInputValueById('expenses',totalExpensesValue);
     setInputValueById('balance',balanceValue);
     
@@ -13,7 +19,10 @@ document.getElementById('calculate').addEventListener('click',function(){
 document.getElementById('save-btn').addEventListener('click',function(){
      inputField() ;
      saveingAmountGreater100()
-     balancelessThenSaveAmount();
+    const isTrue =  balancelessThenSaveAmount();
+    if(isTrue === true){
+        return;
+    }
      
 
     const savingAmountValue = savingAmount();
